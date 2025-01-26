@@ -25,15 +25,19 @@ Este é um sistema bancário simples desenvolvido em Java, que simula a gestão 
 O projeto é estruturado da seguinte forma:
 
 ### Classe `Banco`
+
 Classe principal; contém o método "main" e o menu principal para acesso, cadastro e gerenciamento de agências.
 
 ### Classe `Agencia`
+
 Classe relativa a cada agência. Contém o menu da agência, com opções para cadastro de usuários, login e listagem de usuários.
 
 ### Classe `Usuarios`
+
 Classe referente a cada usuário. Contém o menu do usuário, com opções para cadastro, acesso e listagem de contas.
 
 ### Classe `Contas`
+
 Classe base relativa às contas dos usuários. Conta com métodos para transações: saques, depósitos, transferências, consultas de saldo, etc.
 Conta com três classes filhas, que sobrescrevem alguns de seus métodos e adicionam outros atributos e funções:
 
@@ -42,9 +46,11 @@ Conta com três classes filhas, que sobrescrevem alguns de seus métodos e adici
 - **Classe `ContaSalario`**: Herda de `Conta`, implementa a lógica de saque com limite (máximo de 3 saques por execução) e elimina a possibilidade de depósitos e transferências. Terminam sempre com dígito "-3".
 
 ### Classe `SistemaBanco`
+
 Classe para gerenciamento do arquivo CSV, que contém todos os dados das agências, usuários e contas do banco.
 
 ### Exceções Personalizadas
+
 - **AgenciaIdForaDeFormatoException**: Para quando o ID de uma agência não está no formato correto (três dígitos).
 - **AgenciaIdJaExistenteException**: Para quando uma agência com o mesmo ID já existe.
 - **AgenciaNomeJaExistenteException**: Para quando o nome da agência já está em uso.
@@ -59,9 +65,11 @@ Classe para gerenciamento do arquivo CSV, que contém todos os dados das agênci
 ## Como Usar
 
 ### 1. Clonar o Repositório
+
 Clone o repositório com a pasta "Banco" e o arquivo "dados_banco.csv" para sua pasta de trabalho.
 
 ### 2. Compilar e Executar
+
 Para compilar e executar o projeto, use o seguinte comando no terminal:
 ```bash
 javac Banco/*.java
@@ -71,6 +79,7 @@ Certifique-se que o terminal está localizado no diretório em que a pasta "Banc
 
 ### 3. Interação com o Sistema
 - **Menu Principal**
+
 Neste menu, é possível cadastrar novas agências, listar as agências existentes, ou acessar uma agência.
 Duas agências já foram criadas por padrão:
 
@@ -80,6 +89,7 @@ Duas agências já foram criadas por padrão:
 O usuário pode cadastrar uma nova agência ou acessar uma dessas duas, utilizando os códigos 123 ou 456.
 
 - **Menu da Agência**
+  
 Esse menu é exibido ao acessar uma das agências; ele permite cadastrar novos usuários, listar os usuários de cada agência, e fazer login com o CPF e a senha de um usuário.
 Alguns usuários foram cadastrados de antemão, e estão no arquivo CSV.
 
@@ -96,6 +106,7 @@ Para a agência Central (456):
 Para testar as funcionalidades do sistema, esses usuários podem ser utilizados, ou podem ser criados novos.
 
 - **Menu do Usuário**
+  
 Exibido após o processo de login, o menu do usuário permite que o cliente crie novas contas, liste-as ou acesse uma delas.
 
 Cada um dos usuários pré-cadastrados tem, já, suas contas:
@@ -116,12 +127,14 @@ Cada um dos usuários pré-cadastrados tem, já, suas contas:
 Essas contas podem ser utilizadas pelo usuário para testar as transações possíveis no sistema.
 
 - **Menu da Conta**
+  
 Depois que o código de uma conta é digitado e seu acesso é liberado, o usuário tem acesso a esse menu.
 O menu da conta difere segundo o tipo de cada conta (corrente, poupança ou salário), como anteriormente descrito.
 
 Obs.: É importante que valores decimais sejam digitados utilizando vírgula, em vez de ponto. Por exemplo, "49,50".
 
 - **Arquivo dados_banco.csv**
+  
 O arquivo dados_banco.csv mantém todas as informações do banco, para além do tempo de execução do programa.
 
 Seu formato obedece o seguinte padrão:
