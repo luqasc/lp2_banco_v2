@@ -74,8 +74,8 @@ Certifique-se que o terminal está localizado no diretório em que a pasta "Banc
 Neste menu, é possível cadastrar novas agências, listar as agências existentes, ou acessar uma agência.
 Duas agências já foram criadas por padrão:
 
-Agência Central | Código: 123
-Agência Norte | Código: 456
+- Agência Central | Código: 123
+- Agência Norte | Código: 456
 
 O usuário pode cadastrar uma nova agência ou acessar uma dessas duas, utilizando os códigos 123 ou 456.
 
@@ -84,12 +84,14 @@ Esse menu é exibido ao acessar uma das agências; ele permite cadastrar novos u
 Alguns usuários foram cadastrados de antemão, e estão no arquivo CSV.
 
 Para a agência Central (123):
-Lucas | CPF: 000.000.000-01 | Senha: 111111
-Jorge | CPF: 000.000.000-02 | Senha: 222222
+
+- Lucas | CPF: 000.000.000-01 | Senha: 111111
+- Jorge | CPF: 000.000.000-02 | Senha: 222222
 
 Para a agência Central (456):
-Arthur | CPF: 000.000.000-03 | Senha: 333333
-Matheus | CPF: 000.000.000-04 | Senha: 444444
+
+- Arthur | CPF: 000.000.000-03 | Senha: 333333
+- Matheus | CPF: 000.000.000-04 | Senha: 444444
 
 Para testar as funcionalidades do sistema, esses usuários podem ser utilizados, ou podem ser criados novos.
 
@@ -98,18 +100,18 @@ Exibido após o processo de login, o menu do usuário permite que o cliente crie
 
 Cada um dos usuários pré-cadastrados tem, já, suas contas:
 
-Lucas
-Conta 1.000-1 (Corrente) | Saldo: R$ 300,00
-Conta 1.002-3 (Salário) | Saldo: R$ 100,00
-Jorge
-Conta 2.000-1 (Corrente) | Saldo: R$ 450,00
-Conta 2.001-3 (Salário) | Saldo: R$ 40,00
-Arthur
-Conta 3.000-1 (Corrente) | Saldo: R$ 427,50
-Conta 3.001-2 (Poupança) | Saldo: R$ 0,50
-Matheus
-Conta 4.000-1 (Corrente) | Saldo: R$ 572,50
-Conta 4.001-2 (Poupança) | Saldo: R$ 4.000,00
+- Lucas
+  - Conta 1.000-1 (Corrente) | Saldo: R$ 300,00
+  - Conta 1.002-3 (Salário) | Saldo: R$ 100,00
+- Jorge
+  - Conta 2.000-1 (Corrente) | Saldo: R$ 450,00
+  - Conta 2.001-3 (Salário) | Saldo: R$ 40,00
+- Arthur
+  - Conta 3.000-1 (Corrente) | Saldo: R$ 427,50
+  - Conta 3.001-2 (Poupança) | Saldo: R$ 0,50
+- Matheus
+  - Conta 4.000-1 (Corrente) | Saldo: R$ 572,50
+  - Conta 4.001-2 (Poupança) | Saldo: R$ 4.000,00
 
 Essas contas podem ser utilizadas pelo usuário para testar as transações possíveis no sistema.
 
@@ -123,15 +125,15 @@ Obs.: É importante que valores decimais sejam digitados utilizando vírgula, em
 O arquivo dados_banco.csv mantém todas as informações do banco, para além do tempo de execução do programa.
 
 Seu formato obedece o seguinte padrão:
-CÓDIGO_AGÊNCIA,NOME_AGÊNCIA,CPF_USUARIO,NOME_USUARIO,SENHA_USUARIO,ID_CONTA,SALDO_CONTA
-123,Central,000.000.000-01,Lucas,111111,1.000-1,300.0
-123,Central,000.000.000-01,Lucas,111111,1.002-3,100.0
-123,Central,000.000.000-02,Jorge,222222,2.000-1,450.0
-123,Central,000.000.000-02,Jorge,222222,2.001-3,40.0
-456,Norte,000.000.000-03,Arthur,333333,3.000-1,427.5
-456,Norte,000.000.000-03,Arthur,333333,3.001-2,0.5
-456,Norte,000.000.000-04,Matheus,444444,4.000-1,572.5
-456,Norte,000.000.000-04,Matheus,444444,4.001-2,4000.0
+- CÓDIGO_AGÊNCIA,NOME_AGÊNCIA,CPF_USUARIO,NOME_USUARIO,SENHA_USUARIO,ID_CONTA,SALDO_CONTA
+- 123,Central,000.000.000-01,Lucas,111111,1.000-1,300.0
+- 123,Central,000.000.000-01,Lucas,111111,1.002-3,100.0
+- 123,Central,000.000.000-02,Jorge,222222,2.000-1,450.0
+- 123,Central,000.000.000-02,Jorge,222222,2.001-3,40.0
+- 456,Norte,000.000.000-03,Arthur,333333,3.000-1,427.5
+- 456,Norte,000.000.000-03,Arthur,333333,3.001-2,0.5
+- 456,Norte,000.000.000-04,Matheus,444444,4.000-1,572.5
+- 456,Norte,000.000.000-04,Matheus,444444,4.001-2,4000.0
 
 Essas informações são lidas na inicialização do programa, e após sua finalização os novos dados são salvos.
 
